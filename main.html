@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanoi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="row">
+        <div class="col s3">
+          <section class="valign-wrapper">
+            <h3>COUNTER</h3>
+          </section>
+          <section class="valign-wrapper">
+            <h3 id="counter">0</h3>
+          </section>
+        </div>
+        <div class="col s6 valign-wrapper">
+          <h1 class="center">Hanoi</h1>
+        </div>
+        <div class="col s3">
+          <section class="valign-wrapper">
+            <h3>TIMER</h3>
+          </section>
+          <section class="valign-wrapper">
+            <h3 id="timer">0</h3>
+          </section>
+        </div>
+      </header>
+      <main class="row">
+        <div class="stick col s4">
+          <div class="filler"></div>
+          <div class="discCon" id="lStock"></div>
+        </div>
+        <div class="stick col s4">
+          <div class="filler"></div>
+          <div class="discCon" id="mStock"></div>
+        </div>
+        <div class="stick col s4">
+          <div class="filler"></div>
+          <div class="discCon" id="rStock"></div>
+        </div>
+      </main>
+      <footer class="row">
+        <div class="col s2">
+            <button class="btn-large waves-effect" id="showTip">Show Tip</button>
+        </div>
+        <div class="col s8">
+          <a
+            href="#modalStart"
+            class="btn-large modal-trigger start-trigger indigo waves-effect waves-green"
+          >
+            <h2>START</h2>
+          </a>
+          <div class="modal" id="modalStart">
+            <div class="modal-content">
+              <div class="modal-text flow-text">
+                <h2 class="center">HOW TO PLAY</h2>
+                <p class="center">
+                  Your goal is to move all disks on the right tower.
+                </p>
+                <p class="center">
+                  In order to move disk from one tower to another simply click
+                  the tower you want to take it from and then click the tower
+                  you want to put it on. Keep in mind that you can't put bigger
+                  disks on smaller ones
+                </p>
+                <div class="input-con row">
+                  <p class="col s4">How many disks:</p>
+                  <input
+                    type="number"
+                    value="5"
+                    class="col s8 center"
+                    id="howManyDisks"
+                    max="20"
+                  />
+                </div>
+              </div>
+              <a href="#!" class="modal-close btn-large" id="start">Start</a>
+            </div>
+          </div>
+          <div class="modal" id="modalWin">
+            <div class="modal-content">
+              <div class="modal-text flow-text">
+                <h2 class="center">Congratulations! You won</h2>
+                <p class="center">It took you: <span id="numberOfMoves"></span> moves.</p>
+                <p class="center">The minimal number of moves for this amount of disks is: <span id="minimalMoves"></span></p>
+              </div>
+              <a href="#!" class="modal-close btn-large" id="reset">Reset</a>
+            </div>
+            </div>
+          </div>
+          <div class="col s2 teal">
+              <div class="switch-text center">Solving bot</div>
+              <div class="switch bot-switch center valign-wrapper">
+                  <label>
+                      Off
+                      <input type="checkbox" id="turnBot">
+                      <span class="lever"></span>
+                      On
+                  </label>
+              </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let elems = document.querySelectorAll(".modal");
+            let instances = M.Modal.init(elems);
+        });
+        </script>
+  </body>
+</html>

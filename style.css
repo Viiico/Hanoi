@@ -1,0 +1,145 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container {
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw !important;
+  max-width: 100vw;
+}
+
+header {
+  height: 20vh;
+  width: 100%;
+}
+
+header > div {
+  height: 100%;
+}
+
+section {
+  height: 50%;
+  text-align: center;
+}
+
+section > h3,
+section > h4 {
+  width: 100%;
+}
+
+h1 {
+  width: 100%;
+  font-size: max(2vw, 7rem, 7rem);
+}
+
+main {
+  height: 70vh;
+  width: 100%;
+}
+
+main > div {
+  height: 100%;
+  border: 1px solid black;
+}
+
+.filler {
+  height: 20%;
+}
+
+.discCon {
+  height: 80%;
+}
+
+.stick {
+  background-image: url("IMG/stick.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 30% 115%;
+  height: 100%;
+}
+
+footer {
+  height: 10vh;
+  width: 100%;
+}
+
+footer > div {
+  height: 100%;
+}
+
+.start-trigger {
+  width: 100%;
+  height: 100%;
+}
+
+.start-trigger > * {
+  margin-top: 2.5vh !important;
+}
+
+.modal {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 20vh !important;
+  height: 35vh;
+  border-radius: 2%;
+}
+
+.modal-content {
+  height: 100%;
+  font-size: 200%;
+}
+.modal-text {
+  height: 80%;
+}
+.modal-close {
+  width: 100%;
+  height: 20%;
+}
+.input-con > input {
+  font-size: 2rem !important;
+}
+#showTip {
+  width: 100%;
+  height: 100%;
+}
+
+.switch-text {
+  height: 20%;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.switch > label {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.bot-switch {
+  width: 100%;
+  height: 80%;
+}
+
+.disk {
+  width: 100%;
+  background-color: red;
+  border: 1px solid black;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  background-image: linear-gradient(to bottom, #b3c6ff, #99ebff);
+  background-attachment: fixed;
+}
+
+.disk > p {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.filler-disk {
+  opacity: 0;
+}
+
+.mark{
+  background-color: rgba(0, 0, 0, 0.1);
+}
